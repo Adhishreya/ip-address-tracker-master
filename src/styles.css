@@ -69,6 +69,7 @@ input
     height: 100vh;
 
 }
+#mapid { height: 180px; }
 .ip,.utc,.isp,.loc
 {
   font-weight: 700;

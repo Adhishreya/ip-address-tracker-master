@@ -1,7 +1,7 @@
 import "./styles.css";
 import React,{useState,useEffect} from "react";
 import axios from "axios";
-import 'leaflet/dist/leaflet.css';
+// import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 export default function App() {
   const [ip,setIp]=useState("");
@@ -31,7 +31,7 @@ export default function App() {
       <div><span>Timezone</span><span className="utc">UTC -{utc}</span></div>
       <div><span>ISP</span><span className="isp">{isp}</span></div>  
     </div>
-    <div id="mapid" >
+    {/* <div id="mapid" >
     <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
     <TileLayer
       attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -43,7 +43,7 @@ export default function App() {
       </Popup>
     </Marker>
   </MapContainer>
-    </div>
+    </div> */}
   </div>
   );
 }
