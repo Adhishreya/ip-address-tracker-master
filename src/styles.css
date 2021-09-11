@@ -1,0 +1,76 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 90%;
+  height: 100%;
+  /* background-image:url('./images/pattern-bg.png') ; */
+  /* background: url('./images/pattern-bg.png') no-repeat ; */
+  /* width: 100%; */
+}
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+body,html,#root
+{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body
+{
+background: url('./images/pattern-bg.png') scroll 0rem -8rem no-repeat ;
+/* display: flex; */
+/* flex-direction: column; */
+}
+button
+{
+  background: url('./images/icon-arrow.svg') scroll 0.5rem 0.5rem no-repeat hsl(0, 0%, 17%);
+  /* background:  hsl(0, 0%, 17%); */
+  /* color: aliceblue; */
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
+  width: 2rem;
+  height: 2rem;
+}
+.top-input-area
+{
+  display: flex;
+  flex-direction: row;
+}
+input
+{
+  width: 14rem;
+}
+.grid
+{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  background: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 59%);
+  height: 10rem;
+  border-radius: 0.5rem;
+  margin:2rem auto;
+  width: 80%;
+}
+.grid > div 
+{
+  display: flex;
+  flex-direction: column;
+  /* color: hsl(0, 0%, 17%); */
+  /* font-weight: 700; */
+}
+
+/* #mapid { height: 180px; } */
+#mapid,.leaf-container
+{
+    width: 100vh; 
+    height: 100vh;
+
+}
+.ip,.utc,.isp,.loc
+{
+  font-weight: 700;
+  color: hsl(0, 0%, 17%);
+}
