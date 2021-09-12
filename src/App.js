@@ -3,7 +3,17 @@ import React,{useState,useEffect} from "react";
 import axios from "axios";
 // import 'leaflet/dist/leaflet.css';
 // import marker-icon from './images/pattern-bg.png';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Popup,useMap } from 'react-leaflet';
+
+function MyComponent({lat,long}) {
+  const map = useMap()
+  console.log(lat)
+  // console.log('map center:', map.getCenter())
+  map.setView([lat,long])
+
+  return null
+}
+
 export default function App() {
   const [ip,setIp]=useState("192.212.174.101");
   const [loc,setLoc]=useState("");
@@ -16,6 +26,8 @@ export default function App() {
   useEffect(()=>{
     const loading =async()=>
     {
+      // const context = useLeafletContext();//to get the context created by mapContainer component
+
      console.log(ip);
     const url = "https://geo.ipify.org/api/v1?apiKey=at_Olt59VNzhOKJ6nzHEyE0s5bJElxdJ&ipAddress="+ip;
     //  const results = await axios('url') ;
@@ -72,6 +84,7 @@ export default function App() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Marker position={[lat,long]}  className="pop-up">
+          <MyComponent lat={lat} long={long}/>
           <Popup>
             A pretty CSS3 popup. <br /> Easily customizable.
           </Popup>
