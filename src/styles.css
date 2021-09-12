@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 .App {
   font-family: sans-serif;
   text-align: center;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   margin: auto;
   width: 90%;
@@ -21,27 +24,41 @@ body,html,#root
 }
 body
 {
-background: url('./images/pattern-bg.png') scroll 0rem -8rem no-repeat ;
+background: url('./images/pattern-bg.png') scroll 0rem 0rem no-repeat;
+/* background-size: 0px 1rem; */
+
+font-family: 'Rubik';
 /* display: flex; */
 /* flex-direction: column; */
 }
 button
 {
-  background: url('./images/icon-arrow.svg') scroll 0.5rem 0.5rem no-repeat hsl(0, 0%, 17%);
+  background: url('./images/icon-arrow.svg') scroll 1rem 1.2rem no-repeat hsl(0, 0%, 17%);
   /* background:  hsl(0, 0%, 17%); */
   /* color: aliceblue; */
   border-radius: 0rem 0.5rem 0.5rem 0rem;
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 4rem;
 }
 .top-input-area
 {
   display: flex;
   flex-direction: row;
+  height: 50%;
+}
+.heading
+{
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  height: fit-content;
 }
 input
 {
-  width: 14rem;
+  width: 15rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  height: 2rem;
 }
 .grid
 {
@@ -49,10 +66,11 @@ input
   grid-template-columns: repeat(4,1fr);
   background: hsl(0, 0%, 100%);
   color: hsl(0, 0%, 59%);
-  height: 15rem;
-  position: relative;
+  /* height: 7rem; */
+  height: fit-content;
+  position: absolute;
   z-index: 1;
-  top: 1rem;
+  top: 10rem;
   border-radius: 0.5rem;
   margin:2rem auto;
   width: 80%;
@@ -78,6 +96,10 @@ input
 
 }
 /* #mapid { height: 180px; } */
+h2
+{
+  border-right: 1px solid hsl(0, 0%, 59%);
+}
 .ip,.utc,.isp,.loc
 {
   font-weight: 700;
@@ -86,4 +108,18 @@ input
 .pop-up
 {
   background: url('./images/icon-location.svg') hsl(0, 0%, 17%);
+}
+
+@media screen and (max-width:680px) {
+.grid
+{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}  
+h2
+{
+  
+  border-right:0px ;
+}
 }
