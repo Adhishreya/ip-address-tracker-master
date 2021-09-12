@@ -21,16 +21,14 @@ export default function App() {
     //  const results = await axios('url') ;
     try{
 
-      const {data:{isp,location:{lat,lng,timezone,city,country}}} = await axios(url);
-      console.log(lat,lng,isp);
-      setLat(Number(lat));
-      setLong(Number(lng));
-      setIsp(isp);
-      setUtc(timezone);
-      setLoc(city+" , "+country);
-      setError(false);
-      // console.log(await axios(url));
-      
+      // const {data:{isp,location:{lat,lng,timezone,city,country}}} = await axios(url);
+      // console.log(lat,lng,isp);
+      // setLat(Number(lat));
+      // setLong(Number(lng));
+      // setIsp(isp);
+      // setUtc(timezone);
+      // setLoc(city+" , "+country);
+      // setError(false);      
     }
     catch(error)
     {
@@ -41,9 +39,10 @@ export default function App() {
 
     loading();
   },[ip,input]);
-  // const position=
   return (
   <div className="App"> 
+  <input placeholder="lat" onChange={(e)=>setLat(e.target.value)}/>
+  <input placeholder="long" onChange={(e)=>setLong(e.target.value)}/>
     <div className="heading"> IP Address Tracker</div>
     <div className="top-input-area">
       <input placeholder="Search for any IP address or domain" onChange={e=>{setInput(e.target.value);
@@ -66,7 +65,7 @@ export default function App() {
       <div><span>ISP</span><span className="isp">{isp}</span></div>  
     </div>
 
-        <div id="mapid" style={{width:"30rems", height:"580px"}} >
+        <div id="mapid" style={{}} >
         <MapContainer center={[lat,long]} zoom={10} scrollWheelZoom={false}>
         <TileLayer
           attribution='Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>'
