@@ -88,9 +88,15 @@ export default function App() {
       }}></button>
     </div> 
    
-
+    <div className="grid">
+      <div><span>IP Address</span><h2 className="ip">{ip}</h2></div>
+      <div><span>Location</span><h2 className="loc">{loc}</h2></div>
+      <div><span>Timezone</span><h2 className="utc">UTC {utc}</h2></div>
+      <div><span>ISP</span><h2 className="isp">{isp}</h2></div>  
+    </div>
+    
         <div id="mapid" style={{}} >
-        <MapContainer center={[lat,long]} zoom={13} scrollWheelZoom={false}>
+        <MapContainer center={[lat,long]} zoom={12} scrollWheelZoom={false} zoomControl={false}>
         <TileLayer
           attribution='Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -103,12 +109,7 @@ export default function App() {
         </Marker>
       </MapContainer>
         </div>
-        <div className="grid">
-      <div><span>IP Address</span><h2 className="ip">{ip}</h2></div>
-      <div><span>Location</span><h2 className="loc">{loc}</h2></div>
-      <div><span>Timezone</span><h2 className="utc">UTC {utc}</h2></div>
-      <div><span>ISP</span><h2 className="isp">{isp}</h2></div>  
-    </div>
+      
   </div>
   );
 }

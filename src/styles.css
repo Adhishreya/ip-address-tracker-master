@@ -19,14 +19,18 @@ body,html,#root
 {
   width: 100%;
   margin: 0;
+  overflow-x: hidden;
   padding: 0;
   height: 100%;
 }
 body
 {
-background: url('./images/pattern-bg.png') scroll 0rem 0rem no-repeat;
+background: url('./images/pattern-bg.png') scroll -1rem 0rem no-repeat;
 /* background-size: 0px 1rem; */
-
+display: flex;
+background-size:100% cover ;
+flex-direction: column;
+/* background-repeat:repeat-x;    */
 font-family: 'Rubik';
 /* display: flex; */
 /* flex-direction: column; */
@@ -44,7 +48,7 @@ button
 {
   display: flex;
   flex-direction: row;
-  height: 50%;
+  height: 5rem;
 }
 .heading
 {
@@ -68,9 +72,9 @@ input
   color: hsl(0, 0%, 59%);
   /* height: 7rem; */
   height: fit-content;
-  position: absolute;
+  /* position: absolute; */
   z-index: 1;
-  top: 10rem;
+  /* top: 8rem; */
   border-radius: 0.5rem;
   margin:2rem auto;
   width: 80%;
@@ -89,7 +93,7 @@ input
     width: 100vh; 
     z-index: -1;
     position: relative;
-    top: -1rem;
+    top: -2.9rem;
     height: 100vh;
     height: 100%;
     width: 100vw;
@@ -99,6 +103,7 @@ input
 h2
 {
   border-right: 1px solid hsl(0, 0%, 59%);
+  font-size: 18px;
 }
 .ip,.utc,.isp,.loc
 {
@@ -116,10 +121,19 @@ h2
   display: flex;
   flex-direction: column;
   text-align: center;
+  /* height: 50%; */
+  top: 3rem;
 }  
 h2
 {
   
   border-right:0px ;
+}
+
+
+#mapid,.leaflet-container
+{
+ height: 100vh;
+ top: 5.5rem; 
 }
 }
