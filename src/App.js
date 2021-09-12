@@ -44,15 +44,15 @@ export default function App() {
     //  const results = await axios('url') ;
     try{
 
-      // const {data:{ip,isp,location:{lat,lng,timezone,city,country}}} = await axios(url);
-      // console.log(lat,lng,isp);
-      // setIp(ip);
-      // setLat(Number(lat));
-      // setLong(Number(lng));
-      // setIsp(isp);
-      // setUtc(timezone);
-      // setLoc(city+" , "+country);
-      // setError(false);      
+      const {data:{ip,isp,location:{lat,lng,timezone,city,country}}} = await axios(url);
+      console.log(lat,lng,isp);
+      setIp(ip);
+      setLat(Number(lat));
+      setLong(Number(lng));
+      setIsp(isp);
+      setUtc(timezone);
+      setLoc(city+" , "+country);
+      setError(false);      
     }
     catch(error)
     {
