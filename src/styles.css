@@ -93,7 +93,7 @@ input
     width: 100vh; 
     z-index: -1;
     position: relative;
-    top: -2.9rem;
+    /* top: -2.9rem; */
     height: 100vh;
     height: 100%;
     width: 100vw;
@@ -133,7 +133,16 @@ h2
 
 #mapid,.leaflet-container
 {
- height: 100vh;
- top: 5.5rem; 
+ /* height: 100vh; */
+ height: 21vh;
+ /* top: 5.5rem;  */
+}
+.top-input-area
+{
+  width: 90%;
+}
+.top-input-area input
+{
+  width: 100%;
 }
 }
