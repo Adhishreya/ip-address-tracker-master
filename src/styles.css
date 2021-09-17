@@ -91,7 +91,7 @@ input
 #mapid,.leaflet-container
 {
     width: 100vh; 
-    z-index: -1;
+    z-index: 1;
     position: relative;
     /* top: -2.9rem; */
     height: 100vh;

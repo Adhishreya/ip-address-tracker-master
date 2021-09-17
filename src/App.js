@@ -96,7 +96,7 @@ export default function App() {
     </div>
     
         <div id="mapid" style={{}} >
-        <MapContainer center={[lat,long]} zoom={12} scrollWheelZoom={false} zoomControl={false}>
+        <MapContainer center={[lat,long]} zoom={12} scrollWheelZoom={true} zoomControl={false}>
         <TileLayer
           attribution='Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
